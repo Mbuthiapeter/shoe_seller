@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/icon_add"
+        android:layout_gravity="right"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/add_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:id="@+id/from_date"
+        android:hint="Month of Year"
+        android:layout_below="@+id/icon_add"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/icon_fetch"
+        android:layout_gravity="right"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/fetch_icon"
+        android:layout_alignBottom="@+id/from_date"
+        android:layout_alignLeft="@+id/icon_add"
+        android:layout_alignStart="@+id/icon_add" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/daily_sale_list"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/icon_fetch">
+    </ListView>
+ <RelativeLayout
+     android:id="@+id/footer"
+     android:layout_width="match_parent"
+     android:layout_height="100dp"
+     android:background="#595555"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentStart="true">
+     <TextView
+         android:id="@+id/tvTotalSale"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="#fff"
+         android:text="Total sale:" />
+     <TextView
+         android:id="@+id/tvTotalProfit"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Total profit"
+         android:textColor="#fff"
+         android:layout_centerVertical="true"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true" />
+
+     <TextView
+         android:id="@+id/tvShoeCount"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Number of shoes"
+         android:textColor="#fff"
+         android:layout_alignBaseline="@+id/tvSellingPrice"
+         android:layout_alignBottom="@+id/tvSellingPrice"
+         android:layout_centerHorizontal="true" />
+
+ </RelativeLayout>
+
+</RelativeLayout>
